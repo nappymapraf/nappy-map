@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Background Muted Mint Teal -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#A5D4D1"/>
+      <stop offset="100%" stop-color="#93C8C5"/>
+    </linearGradient>
+
+    <!-- Pink Pin Gradient -->
+    <linearGradient id="pinkPinGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F88DA0"/>
+      <stop offset="100%" stop-color="#ED788E"/>
+    </linearGradient>
+
+    <!-- Small Teal Pin Gradient -->
+    <linearGradient id="smallPinGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#55B5AC"/>
+      <stop offset="100%" stop-color="#3FA49B"/>
+    </linearGradient>
+
+    <!-- Soft 3D Drop Shadows -->
+    <filter id="pinTipShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="10" stdDeviation="6" flood-color="#0B3C43" flood-opacity="0.25"/>
+    </filter>
+
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0B3C43" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- 1. Outer App Icon Canvas (Soft rounded squircle) -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)"/>
+
+  <!-- 2. Perspective Curved Map Base (Domed map ground surface at the bottom) -->
+  <g filter="url(#softShadow)">
+    <!-- Base Curved Map Surface Clip Path -->
+    <path id="mapSurface" d="M 18 310 
+             Q 256 220 494 310 
+             Q 256 470 18 310 Z" 
+          fill="#FAF6F0"/>
+
+    <!-- Map Grid Tiles (Sage Green & Pale Beige) -->
+    <g stroke="#FFFFFF" stroke-width="6" stroke-linejoin="round" stroke-linecap="round">
+      <!-- Perspective Row 1 (Back) -->
+      <polygon points="120,270 210,250 256,260 170,282" fill="#D2E3DD"/>
+      <polygon points="210,250 300,242 340,255 256,260" fill="#EFE8DD"/>
+      <polygon points="300,242 390,250 420,270 340,255" fill="#D2E3DD"/>
+
+      <!-- Perspective Row 2 (Middle) -->
+      <polygon points="70,290 170,282 256,298 135,315" fill="#EFE8DD"/>
+      <polygon points="170,282 256,260 340,255 256,298" fill="#D2E3DD"/>
+      <polygon points="340,255 420,270 442,305 340,320" fill="#EFE8DD"/>
+
+      <!-- Perspective Row 3 (Front) -->
+      <polygon points="32,325 135,315 256,345 105,370" fill="#D2E3DD"/>
+      <polygon points="135,315 256,298 377,315 256,345" fill="#EFE8DD"/>
+      <polygon points="256,298 340,320 480,325 377,315" fill="#D2E3DD"/>
+
+      <polygon points="105,370 256,345 407,370 256,415" fill="#EFE8DD"/>
+    </g>
+
+    <!-- White Road Lines Overlay for Clean Map Grid -->
+    <!-- Transversal Curved Lines -->
+    <path d="M 60 282 Q 256 215 452 282" fill="none" stroke="#FFFFFF" stroke-width="7"/>
+    <path d="M 38 312 Q 256 245 474 312" fill="none" stroke="#FFFFFF" stroke-width="8"/>
+    <path d="M 22 350 Q 256 280 490 350" fill="none" stroke="#FFFFFF" stroke-width="9"/>
+
+    <!-- Radial Perspective Lines -->
+    <path d="M 120 250 L 35 370" stroke="#FFFFFF" stroke-width="7"/>
+    <path d="M 200 238 L 130 420" stroke="#FFFFFF" stroke-width="7"/>
+    <path d="M 256 235 L 256 430" stroke="#FFFFFF" stroke-width="8"/>
+    <path d="M 312 238 L 382 420" stroke="#FFFFFF" stroke-width="7"/>
+    <path d="M 392 250 L 477 370" stroke="#FFFFFF" stroke-width="7"/>
+  </g>
+
+  <!-- 3. Small Teal Pin on the Right Map Grid -->
+  <g filter="url(#softShadow)">
+    <path d="M 372 320 
+             C 358 298, 346 282, 346 266 
+             A 26 26 0 1 1 398 266 
+             C 398 282, 386 298, 372 320 Z" 
+          fill="url(#smallPinGrad)" 
+          stroke="#FFFFFF" 
+          stroke-width="2.5"/>
+    <circle cx="372" cy="265" r="9" fill="#FFFFFF"/>
+  </g>
+
+  <!-- 4. Curved Dotted Route (From Pin Base to Small Pin Base) -->
+  <path d="M 220 332 Q 280 372 355 315" 
+        fill="none" 
+        stroke="#185E63" 
+        stroke-width="5" 
+        stroke-dasharray="8,8" 
+        stroke-linecap="round"/>
+  
+  <circle cx="220" cy="332" r="5" fill="#185E63"/>
+  <circle cx="355" cy="315" r="5" fill="#185E63"/>
+
+  <!-- 5. Tip Shadow under Main Pink Pin -->
+  <ellipse cx="256" cy="336" rx="18" ry="7" fill="#0B3C43" opacity="0.25"/>
+
+  <!-- 6. Main Large Pink Teardrop Pin -->
+  <g filter="url(#pinTipShadow)">
+    <!-- Pin Outline & Fill -->
+    <path d="M 256 336 
+             C 182 250, 142 195, 142 142 
+             A 114 114 0 1 1 370 142 
+             C 370 195, 330 250, 256 336 Z" 
+          fill="url(#pinkPinGrad)"/>
+
+    <!-- Inner Cream-White Circle -->
+    <circle cx="256" cy="142" r="82" fill="#FFFDF8"/>
+
+    <!-- 7. Dark Teal Diaper Changing Silhouette (Parent & Baby) -->
+    <g fill="#0B3C43">
+      <!-- Parent Head -->
+      <circle cx="206" cy="106" r="14"/>
+
+      <!-- Parent Body Bending Over -->
+      <path d="M 196 150 
+               C 196 125, 210 118, 228 122 
+               L 258 130 
+               C 265 132, 268 139, 264 145 
+               C 260 151, 252 150, 247 144 
+               L 236 135 
+               L 220 160 
+               Z"/>
+
+      <!-- Changing Table Bar -->
+      <rect x="202" y="159" width="98" height="8" rx="4"/>
+
+      <!-- Baby Head -->
+      <circle cx="280" cy="148" r="9"/>
+      <!-- Baby Body on Table -->
+      <path d="M 238 152 Q 260 148 274 152 L 274 159 L 238 159 Z" fill="#0B3C43"/>
+      <!-- Baby Legs Raised Up -->
+      <path d="M 244 152 L 238 138" stroke="#0B3C43" stroke-width="5.5" stroke-linecap="round"/>
+      <path d="M 251 152 L 246 137" stroke="#0B3C43" stroke-width="5.5" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <!-- 8. "NAPPY MAP" Curved Text Following Map Bottom Curve -->
+  <!-- Invisible Curved Text Path for Perfect Arch Alignment -->
+  <path id="textArch" d="M 70 380 Q 256 465 442 380" fill="none"/>
+
+  <text font-family="system-ui, -apple-system, 'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="46" letter-spacing="3">
+    <textPath href="#textArch" startOffset="50%" text-anchor="middle">
+      <tspan fill="#0B3C43">NAPPY </tspan>
+      <tspan fill="#F88DA0">MAP</tspan>
+    </textPath>
+  </text>
+</svg>
