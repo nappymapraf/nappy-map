@@ -1,5 +1,5 @@
 // Nappy Map PWA Service Worker
-const CACHE_NAME = 'nappy-map-v4';
+const CACHE_NAME = 'nappy-map-v5';
 const ASSETS_TO_CACHE = [
   '/',
   '/index.html',

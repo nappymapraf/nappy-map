@@ -4,7 +4,7 @@ import { LocationCoordinates } from '../types';
 import { DEFAULT_CITIES } from '../data/mockPlaces';
 import { useLanguage } from '../i18n/LanguageContext';
 import { LANGUAGES, Language } from '../i18n/translations';
-import officialLogo from '../assets/images/nappy_map_icon_1786615086192.jpg';
+import { OFFICIAL_NAPPY_MAP_LOGO } from '../assets/logoBase64';
 
 interface HeaderProps {
   currentCityKey: string;
@@ -56,7 +56,7 @@ export const Header: React.FC<HeaderProps> = ({
             className="w-10 h-10 rounded-xl overflow-hidden shadow-md border border-teal-200 shrink-0 hover:scale-105 active:scale-95 transition-transform cursor-pointer focus:outline-hidden"
             title="Ingrandisci Icona / Anteprima Logo"
           >
-            <img src={officialLogo} alt="Nappy Map Logo" className="w-full h-full object-cover" />
+            <img src={OFFICIAL_NAPPY_MAP_LOGO} alt="Nappy Map Logo" className="w-full h-full object-cover" />
           </button>
           <div className="cursor-pointer" onClick={onOpenIconPreview}>
             <div className="flex items-center gap-2">
