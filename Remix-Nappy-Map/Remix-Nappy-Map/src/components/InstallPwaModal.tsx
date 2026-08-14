@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Smartphone, Download, X, CheckCircle2, MoreVertical, PlusSquare, Share2, Compass } from 'lucide-react';
 import { useLanguage } from '../i18n/LanguageContext';
+import officialLogo from '../assets/images/nappy_map_icon_1786615086192.jpg';
 
 interface BeforeInstallPromptEvent extends Event {
   prompt: () => Promise<void>;
@@ -88,7 +89,7 @@ export const InstallPwaModal: React.FC<InstallPwaModalProps> = ({ isOpen, onClos
         <div className="flex items-start justify-between mb-4">
           <div className="flex items-center gap-3">
             <div className="w-14 h-14 rounded-2xl overflow-hidden shadow-lg shadow-teal-500/20 border border-teal-200 shrink-0">
-              <img src="/icon.png" alt="Nappy Map" className="w-full h-full object-cover" />
+              <img src={officialLogo} alt="Nappy Map" className="w-full h-full object-cover" />
             </div>
             <div>
               <span className="text-[10px] font-extrabold uppercase tracking-wider text-rose-600 bg-rose-50 px-2.5 py-0.5 rounded-full border border-rose-200">

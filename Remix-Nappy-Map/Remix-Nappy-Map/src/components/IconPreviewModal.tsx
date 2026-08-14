@@ -1,5 +1,6 @@
 import React from 'react';
 import { X, ZoomIn, Check, Sparkles, Smartphone, Eye } from 'lucide-react';
+import officialLogo from '../assets/images/nappy_map_icon_1786615086192.jpg';
 
 interface IconPreviewModalProps {
   isOpen: boolean;
@@ -42,10 +43,9 @@ export const IconPreviewModal: React.FC<IconPreviewModalProps> = ({ isOpen, onCl
           {/* Large Preview */}
           <div className="w-64 h-64 sm:w-72 sm:h-72 rounded-3xl overflow-hidden shadow-2xl border-4 border-white transition-transform duration-300 group-hover:scale-105 my-2">
             <img 
-              src="/icon.png" 
+              src={officialLogo} 
               alt="Nappy Map Icon Large Preview" 
               className="w-full h-full object-cover"
-              referrerPolicy="no-referrer"
             />
           </div>
 
